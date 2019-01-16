@@ -185,6 +185,7 @@ a:hover, a:visited, a:link, a:active {
 .banner-text {
     text-align: center;
     font-size: 32px;
+    text-transform: uppercase;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -216,6 +217,7 @@ a:hover, a:visited, a:link, a:active {
 .navigation li {
     display: inline;
     padding: 18px;
+    text-transform: uppercase
 }
 
 .navigation a {
@@ -227,8 +229,16 @@ a:hover, a:visited, a:link, a:active {
     margin: 18px;
 }
 
+.products {
+    text-transform: uppercase;
+}
+
 #featured h5 {
     color: #e2574c;
+}
+
+#featured h6 {
+    text-transform: uppercase;
 }
 
 .submit {
