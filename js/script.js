@@ -24,6 +24,7 @@ $(document).ready(function() {
   });
   // End of Smooth Scrolling
 
+  // Products Carousel
   $(".main-carousel").flickity({
     percentPosition: false,
     imagesLoaded: true,
@@ -32,4 +33,5 @@ $(document).ready(function() {
     cellAlign: "left",
     contain: true
   });
+  // End of Products Carousel
 });
