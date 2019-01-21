@@ -468,6 +468,7 @@ body {
   font-size: 14px;
   font-family: "Raleway";
   color: #2d2d2d;
+  font-weight: 300;
   max-width: 599px;
   margin: 0 auto;
 }
@@ -559,6 +560,7 @@ a:hover {
 
 .navigation li {
   display: inline-block;
+  font-weight: 500;
   text-transform: uppercase;
   margin: 0 1rem;
 }
@@ -586,6 +588,7 @@ a:hover {
 
 .first-line {
   font-size: 1.25rem;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -596,7 +599,6 @@ a:hover {
 
 .about {
   text-align: center;
-  font-weight: 300;
   font-size: 1rem;
   line-height: 2;
   margin: 5%;
@@ -617,10 +619,67 @@ a:hover {
   text-transform: uppercase;
 }
 
-.products img {
-  width: 100%;
-  height: auto;
-  display: block;
+.product-sections {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.double-width.mens {
+  flex: 2 0 100%;
+  max-width: 100%;
+  position: relative;
+  background: url(../images/mens-category.jpg) no-repeat;
+  background-size: cover;
+}
+
+.single-width.trends {
+  flex: 1 0 50%;
+  max-width: 50%;
+  position: relative;
+  background: url(../images/trends-category.jpg) no-repeat;
+  background-size: cover;
+}
+
+.single-width.glasses {
+  flex: 1 0 50%;
+  max-width: 50%;
+  position: relative;
+  background: url(../images/glasses-category.jpg) no-repeat;
+  background-size: cover;
+}
+
+.single-width.sale {
+  flex: 1 0 50%;
+  max-width: 50%;
+  position: relative;
+  background: url(../images/sale-category.jpg) no-repeat;
+  background-size: cover;
+}
+
+.single-width.bags {
+  flex: 1 0 50%;
+  max-width: 50%;
+  position: relative;
+  background: url(../images/bags-category.jpg) no-repeat;
+  background-size: cover;
+}
+
+.double-width.womens {
+  flex: 2 0 100%;
+  max-width: 100%;
+  position: relative;
+  background: url(../images/womens-category.jpg) no-repeat;
+  background-size: cover;
+}
+
+.section-name a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.3rem;
+  top: 50%;
+  text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
 }
 
 #featured h5 {
