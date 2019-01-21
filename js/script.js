@@ -24,13 +24,14 @@ $(document).ready(function() {
   });
   // End of Smooth Scrolling
 
-  // Products Carousel
+  /* Products Carousel
+     @source: https://flickity.metafizzy.co */
   $(".main-carousel").flickity({
     percentPosition: false,
     imagesLoaded: true,
     autoPlay: true,
     prevNextButtons: false,
-    cellAlign: "left",
+    cellAlign: "center",
     contain: true
   });
   // End of Products Carousel

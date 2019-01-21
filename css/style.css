@@ -523,6 +523,7 @@ a:hover {
   width: 100%;
   margin: 0 auto;
   padding: 0 2%;
+  box-sizing: border-box;
 }
 
 .site-header {
@@ -534,6 +535,7 @@ a:hover {
 .logo {
   align-self: flex-start;
   flex: 1 0 50%;
+  padding-top: 10px;
 }
 
 .logo img {
@@ -542,15 +544,15 @@ a:hover {
 }
 
 .cart {
-  flex: 1 0 25%;
-  max-width: 50px;
-  margin-top: 2%;
-  margin-right: 5%;
+  align-self: flex-end;
+  width: 50px;
+  margin-bottom: 2px;
+  margin-right: 2px;
 }
 
 .navigation {
   flex: 1 0 auto;
-  border-top: 2px solid #d7d7d7;
+  border-top: 1px solid #d7d7d7;
 }
 
 .navigation ul {
@@ -570,11 +572,17 @@ a:hover {
 }
 
 .banner {
-  background: url(../images/banner-girl.png) no-repeat center 60px,
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/banner-girl.png) no-repeat center 60px,
     url(../images/flower-bkgd.jpg) repeat-x top;
-  background-size: 150px, cover;
+  background-size: cover, 150px, cover;
   height: 400px;
   position: relative;
+  top: -20px;
 }
 
 .banner-text {
@@ -582,8 +590,9 @@ a:hover {
   font-size: 1rem;
   color: #fff;
   text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
-  position: absolute;
+  position: relative;
   top: 30%;
+  max-width: 60%;
 }
 
 .first-line {
@@ -599,9 +608,14 @@ a:hover {
 
 .about {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 2;
   margin: 5%;
+  padding-bottom: 30px;
+}
+
+.about-text {
+  padding: 0;
 }
 
 .about-text h2 {
@@ -619,57 +633,124 @@ a:hover {
   text-transform: uppercase;
 }
 
+.double-width::before {
+  content: "";
+  float: left;
+  padding-bottom: 50%;
+}
+
+.single-width::before {
+  content: "";
+  float: left;
+  padding-bottom: 100%;
+}
+
+.double-width::after,
+.single-width::after {
+  clear: left;
+  content: " ";
+  display: table;
+}
+
 .product-sections {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
 }
 
-.double-width.mens {
-  flex: 2 0 100%;
-  max-width: 100%;
+.single-width,
+.double-width {
+  box-sizing: border-box;
   position: relative;
-  background: url(../images/mens-category.jpg) no-repeat;
   background-size: cover;
 }
 
-.single-width.trends {
+.single-width {
   flex: 1 0 50%;
-  max-width: 50%;
-  position: relative;
-  background: url(../images/trends-category.jpg) no-repeat;
+}
+
+.double-width {
+  flex: 2 0 100%;
+}
+
+.double-width.mens {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/mens-category.jpg) no-repeat;
   background-size: cover;
+  border-bottom: 6px solid #fff;
+}
+
+.single-width.trends {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/trends-category.jpg) no-repeat;
+  background-size: cover;
+  border-right: 3px solid #fff;
+  border-bottom: 6px solid #fff;
 }
 
 .single-width.glasses {
   flex: 1 0 50%;
   max-width: 50%;
   position: relative;
-  background: url(../images/glasses-category.jpg) no-repeat;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/glasses-category.jpg) no-repeat;
   background-size: cover;
+  border-left: 4px solid #fff;
+  border-bottom: 8px solid #fff;
 }
 
 .single-width.sale {
   flex: 1 0 50%;
   max-width: 50%;
   position: relative;
-  background: url(../images/sale-category.jpg) no-repeat;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/sale-category.jpg) no-repeat;
   background-size: cover;
+  border-right: 4px solid #fff;
+  border-bottom: 8px solid #fff;
 }
 
 .single-width.bags {
   flex: 1 0 50%;
   max-width: 50%;
   position: relative;
-  background: url(../images/bags-category.jpg) no-repeat;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/bags-category.jpg) no-repeat;
   background-size: cover;
+  border-left: 4px solid #fff;
+  border-bottom: 8px solid #fff;
 }
 
 .double-width.womens {
   flex: 2 0 100%;
   max-width: 100%;
   position: relative;
-  background: url(../images/womens-category.jpg) no-repeat;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/womens-category.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -680,21 +761,170 @@ a:hover {
   font-size: 1.3rem;
   top: 50%;
   text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
-#featured h5 {
+.featured {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.featured .container {
+  margin: 60px 0 60px 0;
+}
+
+.featured-text h2 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.featured-text h2 #bold {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.carousel-cell .type {
+  text-transform: uppercase;
+  color: #969696;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+.carousel-cell h3 {
+  font-weight: 300;
+  text-align: center;
+  font-size: 1.3rem;
   color: #e2574c;
 }
 
-#featured h6 {
-  text-transform: uppercase;
+.carousel-cell .price {
+  color: #969696;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
-.submit {
-  background-color: #e2574c;
+.newsletter::before {
+  content: "";
+  float: left;
+  padding-bottom: 100%;
+}
+
+.newsletter::after {
+  clear: left;
+  content: " ";
+  display: table;
+}
+
+.newsletter {
+  background: url(../images/wave-bkgd.jpg) no-repeat bottom;
+  text-align: center;
   color: #fff;
-  height: 20px;
-  border-radius: 10px;
+  text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.newsletter input:focus,
+.newsletter input:active {
+  outline: none;
+}
+
+.newsletter-text h2 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.8rem;
+  padding-top: 25%;
+}
+
+.newsletter-text h2 #bold {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.email {
+  display: block;
+  margin: 2rem auto 0;
+  position: relative;
+  width: 90%;
+}
+
+.email .field,
+.email .submit {
+  border: 0;
+  border-radius: 25px;
+}
+
+.email .field {
+  padding: 0.4rem 1.75rem;
+  padding-right: 150px;
+  width: 150px;
+  height: 25px;
+  color: #969696;
+}
+
+.email .submit {
+  background-color: #e2574c;
+  height: 28px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.25rem 1.5rem;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+}
+
+.footer {
+  background-color: #242424;
+  color: #fff;
+  text-align: center;
+  font-family: "Playfair Display";
+  line-height: 1.5;
+}
+
+.footer .container {
+  padding: 0 0 45px 0;
+}
+
+.contact {
+  padding-top: 45px;
+  font-size: 0.8rem;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration-line: underline;
+}
+
+.contact .address {
+  color: #969696;
+}
+
+.social ul {
+  padding: 0;
+}
+
+.social li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social li {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 8px;
+}
+
+.social #social-label {
+  display: none;
 }
 
 /* Mobile Styling End */
@@ -704,6 +934,9 @@ a:hover {
 @media only screen and (min-width: 600px) {
 }
 
+body {
+  font-size: 16px;
+}
 /* Tablet Styling End */
 
 /* Desktop Styling */
