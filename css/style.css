@@ -469,7 +469,6 @@ body {
   font-family: "Raleway";
   color: #2d2d2d;
   font-weight: 300;
-  max-width: 599px;
   margin: 0 auto;
 }
 
@@ -986,7 +985,7 @@ a:hover {
   }
 
   .about {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding-bottom: 5px;
     margin-top: 4px;
   }
@@ -1137,7 +1136,57 @@ a:hover {
 
 /* Desktop Styling */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1240px) {
+  .body {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 1240px;
+  }
+
+  .banner {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.25) 0,
+        rgba(0, 0, 0, 0.25)
+      ),
+      url(../images/banner-girl.png) no-repeat center 60px,
+      url(../images/flower-bkgd.jpg) repeat-x top;
+    background-size: cover, 250px, 830px;
+    height: 535px;
+    position: relative;
+    top: -20px;
+  }
+
+  .second-line {
+    font-size: 4rem;
+  }
+  .about-text {
+    width: 680px;
+  }
+
+  .section-name a {
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+
+  .newsletter .container {
+    display: flex;
+  }
+
+  .newsletter-text {
+    width: 720px;
+    justify-content: center;
+  }
+
+  .contact {
+    padding-left: 2rem;
+  }
+
+  .social {
+    padding-right: 4rem;
+  }
 }
 
 /* Desktop Styling End */
