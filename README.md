@@ -20,7 +20,7 @@ A one page website including a navigation bar, banner, categories section, most-
 
 ## Main Takeaways
 
-1 - I initially used a number of HTML markups to try and style the content, like "<em>", "<strong>" and "<br>. However, as I worked throught the project and learned more about CSS and its advantages, it became clear to me that I should avoid using HTML but for semantic markup. I removed the styling markups from my HTML and added styling in CSS by using classes.
+1 - I initially used a number of HTML markups to try and style the content, like "em", "strong" and "br. However, as I worked throught the project and learned more about CSS and its advantages, it became clear to me that I should avoid using HTML but for semantic markup. I removed the styling markups from my HTML and added styling in CSS by using classes.
   
 2 - Developing Mobile First seems to be advantageous. It felt more natural to think what needed to be changed as the screen size expanded than the other way around. Besides, the constraints in mobile are greater, posing more challenges to the layout.
 
