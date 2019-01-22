@@ -37,4 +37,19 @@ $(document).ready(function() {
     contain: true
   });
   // End of Products Carousel
+
+  // Newsletter Subscription
+  $("button").on("click", function() {
+    const clientEmail = $('input[name="client-email"]').val();
+
+    // E-mail regex validation @source https://www.tutorialspoint.com/How-to-validate-email-using-jQuery
+    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    // @source end
+
+    if (regex.test(clientEmail)) {
+      alert("Thanks for subscribing!");
+    } else {
+      alert("Please enter a valid email");
+    }
+  });
 });

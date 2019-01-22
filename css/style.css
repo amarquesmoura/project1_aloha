@@ -831,7 +831,9 @@ a:hover {
 }
 
 .newsletter input:focus,
-.newsletter input:active {
+.newsletter input:active,
+.newsletter button:focus,
+.newsletter button:active {
   outline: none;
 }
 
