@@ -27,6 +27,8 @@ $(document).ready(function() {
   /* Products Carousel
      @source: https://flickity.metafizzy.co */
   $(".main-carousel").flickity({
+    wraparound: true,
+    // groupCells: 2,
     percentPosition: false,
     imagesLoaded: true,
     autoPlay: true,
