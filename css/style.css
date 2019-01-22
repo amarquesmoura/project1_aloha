@@ -464,6 +464,7 @@ template {
 
 /* Mobile Styling */
 
+/* General Styling */
 body {
   font-size: 14px;
   font-family: "Raleway";
@@ -501,7 +502,6 @@ h6 strong {
   font-weight: bold;
 }
 
-a:hover,
 a:visited,
 a:link,
 a:active {
@@ -524,6 +524,9 @@ a:hover {
   padding: 0 2%;
   box-sizing: border-box;
 }
+/* End of General Styling */
+
+/* Header */
 
 .site-header {
   display: flex;
@@ -570,6 +573,9 @@ a:hover {
 .navigation a {
   color: #e2574c;
 }
+/* End of Header */
+
+/* Banner */
 
 .banner {
   background: linear-gradient(
@@ -605,6 +611,9 @@ a:hover {
   font-size: 2rem;
   font-family: "Playfair Display";
 }
+/* End of Banner */
+
+/* About */
 
 .about {
   text-align: center;
@@ -628,6 +637,9 @@ a:hover {
   font-style: normal;
   font-weight: 700;
 }
+/* End of About */
+
+/* Sections Menu */
 
 .products {
   text-transform: uppercase;
@@ -764,6 +776,9 @@ a:hover {
   position: absolute;
   transform: translate(-50%, -50%);
 }
+/* End of Sections Menu */
+
+/* Most Sold Carousel */
 
 .featured {
   text-align: center;
@@ -808,26 +823,33 @@ a:hover {
   font-size: 0.8rem;
   font-weight: 700;
 }
+/* End of Most Sold Carousel */
 
-.newsletter::before {
+/* Newsletter Subscription */
+
+.newsletter::before,
+.newsletter-text::before {
   content: "";
   float: left;
   padding-bottom: 100%;
 }
 
-.newsletter::after {
+.newsletter::after,
+.newsletter-text::after {
   clear: left;
   content: " ";
   display: table;
 }
 
 .newsletter {
+  box-sizing: border-box;
   background: url(../images/wave-bkgd.jpg) no-repeat bottom;
   text-align: center;
   color: #fff;
   text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
   font-size: 0.9rem;
   line-height: 1.5;
+  max-height: 340px;
 }
 
 .newsletter input:focus,
@@ -841,7 +863,7 @@ a:hover {
   font-weight: 400;
   font-style: italic;
   font-size: 1.8rem;
-  padding-top: 25%;
+  padding-top: 8%;
 }
 
 .newsletter-text h2 #bold {
@@ -881,6 +903,9 @@ a:hover {
   right: 0.25rem;
   top: 0.25rem;
 }
+/* End of Newsletter Subscription */
+
+/* Footer */
 
 .footer {
   background-color: #242424;
@@ -928,6 +953,7 @@ a:hover {
 .social #social-label {
   display: none;
 }
+/* End of Footer */
 
 /* Mobile Styling End */
 
@@ -1071,7 +1097,7 @@ a:hover {
 
   .newsletter-text h2 {
     font-size: 2.4rem;
-    padding-top: 42%;
+    padding-top: 6%;
   }
 
   .newsletter-text h2 #bold {
@@ -1098,14 +1124,6 @@ a:hover {
     height: 40px;
     margin-right: 60px;
   }
-
-  /* .footer {
-    background-color: #242424;
-    color: #fff;
-    text-align: center;
-    font-family: "Playfair Display";
-    line-height: 1.5;
-  } */
 
   .footer .container {
     text-align: left;
@@ -1175,11 +1193,14 @@ a:hover {
 
   .newsletter .container {
     display: flex;
+    margin-bottom: 8px solid #fff;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .newsletter-text {
     width: 720px;
-    justify-content: center;
+    margin-left: 280px;
   }
 
   .contact {
