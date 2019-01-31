@@ -584,7 +584,7 @@ a:hover {
       rgba(0, 0, 0, 0.25)
     ),
     url(../images/banner-girl.png) no-repeat center 60px,
-    url(../images/flower-bkgd.jpg) repeat-x top;
+    url(../images/flower-bkgd-comp.jpg) repeat-x top;
   background-size: cover, 150px, cover;
   height: 400px;
   position: relative;
@@ -1172,7 +1172,7 @@ a:hover {
         rgba(0, 0, 0, 0.25)
       ),
       url(../images/banner-girl.png) no-repeat center 60px,
-      url(../images/flower-bkgd.jpg) repeat-x top;
+      url(../images/flower-bkgd-comp.jpg) repeat-x top;
     background-size: cover, 250px, 830px;
     height: 535px;
     position: relative;
